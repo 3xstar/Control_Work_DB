@@ -81,6 +81,7 @@ def get_reader_books(reader_id):
         searching_books = cursor.execute("SELECT title, author, year from books WHERE book_id=?", ("".join(str(book_id[0])),))
         for book in searching_books:
             print("Книги этого читателя: ", book)
+          
     libraryDB.close()
 
 def search_books(keyword):
